@@ -1,0 +1,34 @@
+﻿{
+    width: "100%",
+    height: "100%",
+    sortable: true,
+	enabletooltips: true,
+    columnsresize: true,
+    columnsreorder: true,
+    selectionmode: "multiplecellsadvanced",
+	filterable: true,
+    columns: [
+        { text: "Ticker",columngroup: "CompanyGroup", cellsalign: "left", align: "center", datafield: "ticker", width: 110,type: "string" },
+        { text: "Name",columngroup: "CompanyGroup", cellsalign: "left", align: "center", datafield: "name", width: 150,type: "string" },
+        { text: "Year", columngroup: "FiscalGroup", datafield: "fiscalyear", cellsalign: "center", align: "center", width: 80,type: "number" },
+        { text: "Type", columngroup: "FiscalGroup", datafield: "fiscaltype", cellsalign: "center", align: "center", width: 100,type: "string" },
+        { text: "End Date", columngroup: "DateGroup", cellsalign: "left", align: "center", datafield: "enddate", width: 130,type: "date"
+		  ,cellsrenderer: function (index, datafield, value, defaultvalue, column, rowdata) {
+                        return "<div style='margin: 4px;' class='jqx-left-align'>" + value.toDateString() + "</div>";;
+                    } },
+        { text: "Statement Date", columngroup: "DateGroup", datafield: "statementdate", align: "center", cellsalign: "left", width: 130,type: "date"
+		  ,cellsrenderer: function (index, datafield, value, defaultvalue, column, rowdata) {
+                        return "<div style='margin: 4px;' class='jqx-left-align'>" + value.toDateString() + "</div>";;
+                    } },
+        { text: "Code", cellsalign: "center", align: "center", datafield: "code", width: 80,type: "string" },
+        { text: "Period Length", cellsalign: "center", align: "center", datafield: "periodlength", width: 120,type: "number" },
+	    { text: "Value", cellsalign: "center", align: "center", datafield: "value", width: 80,type: "number" },
+		{ text: "Description" , cellsalign: "left", align: "center", datafield: "description",type: "string" }
+
+    ],
+    columngroups: [
+	    { text: "Company", align: "center", name: "CompanyGroup" },
+        { text: "Fiscal", align: "center", name: "FiscalGroup" },
+        { text: "Dates",  align: "center", name: "DateGroup" }
+    ]
+}

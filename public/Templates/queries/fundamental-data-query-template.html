@@ -1,0 +1,21 @@
+﻿<form>
+    <fieldset class="form-group">
+        <label for="companyTickerInput">Company ticker</label>
+        <input type="text" class="form-control" id="companyTickerInput" ng-model="settings.companyTicker">
+    </fieldset>
+    <fieldset class="form-group">
+        <label for="fiscalYearInput">Fiscal year</label>
+        <select class="form-control" id="fiscalYearInput" ng-model="settings.fiscalYear"
+                ng-options="year for year in ['2010','2011','2012','2013','2014','2015'] track by year"></select>
+    </fieldset>
+    <fieldset class="form-group">
+        <label for="fiscalTypeInput">Fiscal type</label>
+        <select class="form-control" id="fiscalTypeInput" ng-model="settings.fiscalType"
+                ng-options="name for name in ['Annual','Interim'] track by name"></select>
+    </fieldset>
+    <fieldset class="form-group">
+        <label for="statementTypeInput">Statement type</label>
+        <select class="form-control" id="statementTypeInput" ng-model="settings.statementType"
+                ng-options="name for name in ['INC','CAS','BAL'] track by name"></select>
+    </fieldset>
+</form>

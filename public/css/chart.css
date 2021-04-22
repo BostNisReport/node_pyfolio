@@ -1,0 +1,66 @@
+.chart-tab-item .glyphicon {
+    display: inline;
+	color: #ababab;
+	margin-left: 5px;
+}
+
+.chart-tab-item .glyphicon-remove, .chart-tab-item .glyphicon-edit {
+	height: 19px;
+}
+.chart-tab-item .glyphicon-remove:hover {
+	color: #000;
+}
+
+.chart-tab-item .glyphicon-edit:hover {
+	color: #000;
+}
+
+.drop-chart-target-border {
+    border-color: gray !important;
+    border-width: 5px !important;
+    border-style: solid !important;
+}
+
+
+/*For Drag&Drop between splitters*/
+.jqx-splitter-panel {
+    overflow: visible !important;
+}
+
+.chart-strategy-form {
+    width: 100%;
+}
+
+    .chart-strategy-form form {
+        padding-top: 5px;
+    }
+
+        .chart-strategy-form form .right-label {
+            float: right;
+            margin-right: 50px;
+        }
+
+.chart-control-element {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    right: 2px;
+}
+
+.chart-message-label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #959595;
+}
+
+
+/*For mobile */
+@media screen and (max-width: 768px) {
+    .chart-tab-headers {
+        display: none;
+    }
+
+    .chart-strategy-form {
+        display: none;
+    }
+}

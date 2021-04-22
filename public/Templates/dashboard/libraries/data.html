@@ -1,0 +1,35 @@
+﻿<style>
+    .sectors-panel{
+        overflow-y:auto;
+        position: absolute;
+        top: 5px;
+        bottom: 5px;
+        left: 5px;
+        width: 180px
+    }
+    .sectors-grid-panel{
+        position: absolute;
+        top: 5px;
+        bottom: 5px;
+        left: 190px;
+        right: 5px
+    }
+    .sectors-item{
+        padding:5px 10px !important;
+    }
+</style>
+<div ng-controller="DashboardLibrariesDataController">
+    <div class="well sectors-panel">
+
+        <ul class="nav nav-pills nav-stacked nav-success ">
+            <li class="nav-header">Sectors</li>
+            <li role="presentation" ng-repeat="category in input.categories" ng-class="{active: input.selectedCategory==category}">
+                <a class="sectors-item" href="" ng-click="input.selectCategory(category)">{{category}}</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="sectors-grid-panel">
+        <div class="sectors-details-grid"></div>
+    </div>
+</div>

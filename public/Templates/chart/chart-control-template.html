@@ -1,0 +1,189 @@
+﻿<div class="chart-div" dock-panel>
+
+    <div class="chart-strategy-form" dock="top" ng-show="chart.highstock.options.series.length&& !chart.highstock.chartMessage">
+
+
+
+    </div>
+
+    <div class="chart-control-toolbar" dock="bottom" ng-show="chart.showChartToolbar && !chart.highstock.chartMessage">
+        <div id="jqxColorPicker"></div>
+        <div class="btn-group btn-group-sm " role="group" aria-label="First group">
+            <!--<button type="button" class="btn btn-default">
+                <img src="/static_files/images/resize16.png?lastModified=20160909T1938" />
+            </button>-->
+
+            <button type="button" class="btn btn-default" title="Full screen"
+                    ng-show="!chart.highstock.isFullScreen"
+                    ng-click="chart.highstock.fullScreen(chart)">
+                <span class="glyphicon glyphicon-resize-full"></span>
+            </button>
+            <button type="button" class="btn btn-default" title="Exit full screen"
+                    ng-show="chart.highstock.isFullScreen"
+                    ng-click="chart.highstock.exitFullScreen()">
+                <span class="glyphicon glyphicon-resize-small"></span>
+            </button>
+
+            <!--<div class="btn-group dropup hidden-phone">
+                <button type="button" class="btn btn-default btn-sm dropdown-toggle"
+                        data-toggle="dropdown" aria-expanded="false" title="Chart's height'">
+                    {{(chart.highstock.chartHeight+1)+'%'}}
+                    <span class="caret"></span>
+                    <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+
+                    <li ng-repeat="h in [100,125,150,175,200,225,250,275,300]">
+                        <a href=""
+                           ng-click="chart.highstock.setChartHeight(h-1)">
+                            {{h+'%'}}
+                        </a>
+                    </li>
+                </ul>
+            </div>-->
+
+
+            <!--<div class="btn-group dropup" ng-show="chart.highstock.options.series.length">
+                <button type="button" class="btn btn-default btn-sm dropdown-toggle"
+                        data-toggle="dropdown" aria-expanded="false" title="Edit chart's theme">
+                    <img src="/static_files/images/theme16.png?lastModified=20160909T1938" />
+                    <span class="caret"></span>
+                    <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="" ng-click="chart.highstock.showThemeEditor('basic')">Basic...</a></li>
+                    <li><a href="" ng-click="chart.highstock.showThemeEditor('advacned')">Advacned...</a></li>
+                    <li class=" divider"></li>
+                    <li><a href="" ng-click="chart.highstock.resetTheme()">Reset default</a></li>
+                </ul>
+            </div>-->
+
+
+            <div class="btn-group dropup">
+                <button type="button" class="btn btn-default btn-sm dropdown-toggle"
+                        data-toggle="dropdown" aria-expanded="false" title="Export series">
+                    <img src="/static_files/images/export16.png?lastModified=20160909T1938" />
+                    <span class="caret"></span>
+                    <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li ng-show="chart.highstock.options.series.length"><a href="" ng-click="chart.highstock.showExportSeriesDialog()">CSV</a></li>
+                    <li class="divider" ng-show="chart.highstock.options.series.length"></li>
+                    <li><a href="" ng-click="chart.highstock.showImportSeriesDialog()">Import...</a></li>
+                </ul>
+            </div>
+
+
+
+
+            <!--<div class="btn-group dropup" ng-show="chart.highstock.options.yAxis.length>1">
+                <button type="button" class="btn btn-default btn-sm dropdown-toggle"
+                        data-toggle="dropdown" aria-expanded="false" title="Resize panels">
+                    <img src="/static_files/images/resize16.png" />
+                    <span class="caret"></span>
+                    <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+
+                    <li ng-show="chart.highstock.options.yAxis.length>1"><a href="" ng-click="chart.highstock.chart.resizeYAxis()">Make all panels the same size</a></li>
+                    <li class="divider" ng-show="chart.highstock.options.yAxis.length>1"></li>
+                    <li ng-repeat="yAxis in chart.highstock.options.yAxis">
+                        <div class="col-xs-10 no-left-right-padding">
+                            <sab-slick-slider value="yAxis.sizeRatio"
+                                              min="0" max="100">
+                                {{yAxis.title.text}}
+                            </sab-slick-slider>
+                        </div>
+                        <div class="col-xs-2 no-left-right-padding top-5-buffer">
+                            <a href="" title="Move up" ng-hide="$first"
+                               onclick="arguments[0].stopPropagation()" ng-click="chart.highstock.chart.shiftYAxisDisplayIndex(yAxis.id,-1)">
+                                <span class="glyphicon glyphicon-arrow-up"></span>
+                            </a>
+                            <a href="" title="Move down" ng-hide="$last"
+                               onclick="arguments[0].stopPropagation()" ng-click="chart.highstock.chart.shiftYAxisDisplayIndex(yAxis.id,1)">
+                                <span class="glyphicon glyphicon-arrow-down"></span>
+                            </a>
+                        </div>
+
+                    </li>
+
+                </ul>
+            </div>-->
+
+
+            <!--<div class="btn-group dropup" ng-show="chart.highstock.options.series.length>0">
+                <button type="button" class="btn btn-default btn-sm dropdown-toggle"
+                        data-toggle="dropdown" aria-expanded="false" title="Remove series">
+                    <img src="/static_files/images/chartdelete16.png?lastModified=20160909T1938" />
+                    <span class="caret"></span>
+                    <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li ng-repeat="series in chart.highstock.options.series">
+                        <a href="" ng-click="chart.highstock.showRemoveSeriesDialog(series.id,true);">
+                            {{series.name}}
+                        </a>
+
+                    </li>
+                </ul>
+            </div>-->
+
+
+            <div class="btn-group dropup" ng-show="chart.highstock.options.series.length>0">
+                <button type="button" class="btn btn-default btn-sm dropdown-toggle"
+                        data-toggle="dropdown" aria-expanded="false" title="Draw lines and bands">
+                    <img src="/static_files/images/vlines-white16.png?lastModified=20160909T1938" />
+                    <span class="caret"></span>
+                    <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li ng-repeat="line in chart.highstock.vLinesList">
+                        <a href="" ng-click="chart.highstock.drawVLinesEvery(line);">{{line.displayName}}</a>
+                    </li>
+                    <li class="divider"> </li>
+                    <!--<li><a href="" ng-click="chart.highstock.drawPlotBandByHand({},'x')">Draw vertical plotband</a></li>
+                    <li><a href="" ng-click="chart.highstock.drawPlotBandByHand({},'y')">Draw horizontal plotband</a></li>-->
+                    <li><a href="" ng-click="chart.highstock.addPlotLineDialog()">Draw horizontal plotline</a></li>
+                    <li ng-show="chart.highstock.hasPlotLinesOrPlotBands()">
+                        <a href="" ng-click="chart.highstock.clearPlotLinesAndPlotBands();">Clear all lines</a>
+                    </li>
+                </ul>
+            </div>
+
+
+            <div class="btn-group dropup" ng-show="chart.highstock.options.series.length>0">
+                <button type="button" class="btn btn-default btn-sm dropdown-toggle"
+                        data-toggle="dropdown" aria-expanded="false" title="Draw annotations">
+                    <img src="/static_files/images/shape16.png?lastModified=20160909T1938" />
+                    <span class="caret"></span>
+                    <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="" ng-click="chart.highstock.drawAnnotationByHand({type:'Circle'});">Circle</a></li>
+                    <li><a href="" ng-click="chart.highstock.drawAnnotationByHand({type:'Rectangle'});">Rectangle</a></li>
+                    <li><a href="" ng-click="chart.highstock.drawAnnotationByHand({type:'Line'});">Line</a></li>
+                    <li><a href="" ng-click="chart.highstock.drawAnnotationByHand({type:'Label'});">Label</a></li>
+                    <li class="divider" ng-show="chart.highstock.chart.options.annotations.length>0"> </li>
+                    <li ng-show="chart.highstock.chart.options.annotations.length>0">
+                        <a href="" ng-click="chart.highstock.clearAnnotationsDialog();">Clear all lines</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+
+    <div class="chart-control-container" dock="fill" ng-show="chart.highstock.options.series.length && !chart.highstock.chartMessage">
+        <div class="chart-control-element"></div>
+    </div>
+
+    
+
+    <div ng-show="chart.highstock.chartMessage" class="centered chart-message-label" style="text-align:center">
+        <div ng-bind-html="chart.highstock.chartMessage"></div>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+﻿<div >
+    <div ng-show="status=='loading'" class="all-content-container top-most">
+        <h3 class="centered">{{statusText||'Loading...'}}</h3>
+    </div>
+    <div ng-show="status=='partLoading'" class="all-content-container" style="opacity:0.8">
+        <h3 class="centered">{{partLoadingStatusText||'Loading...'}}</h3>
+    </div>
+    <div ng-show="status=='error'" class="all-content-container">
+        <h3 class="centered error-tag">{{error}}</h3>
+    </div>
+    <div ng-show="!status" class="all-content-container">
+    </div>
+</div>

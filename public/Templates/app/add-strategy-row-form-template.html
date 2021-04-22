@@ -1,0 +1,12 @@
+﻿<form class="add-query-form" ng-submit="strategy.addNewAlgorithm(algorithmText)">
+   
+    <label class="add-query-label">Enter query</label>
+    <input class="add-query-box form-control" id="inputAlgorithm" autocomplete="off" placeholder="" ng-model="algorithmText">
+
+    <button type="submit" class="btn btn-primary add-query-button"
+            ng-disabled="strategy.addNewAlgorithm_busy || !algorithmText">
+        Add
+    </button>
+
+   
+</form>

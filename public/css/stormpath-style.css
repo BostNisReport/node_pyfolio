@@ -1,0 +1,781 @@
+/* Styles */
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 200;
+	color: #444;
+	margin: 0;
+	padding: 0;
+}
+
+/* Font size CSS borrowed from http://csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css/ */
+/* Define your base font-size here; most elements will inherit this. */
+html{
+    font-size:1em;      /* Assuming 16px... */
+    line-height:1.5;    /* 24px (This is now our magic number; all subsequent margin-bottoms and line-heights want to be a multiple of this number in order to maintain vertical rhythm.) */
+}
+
+a {
+	color: #3B58B8;
+	text-decoration: underline;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+/* Common margin-bottom for vertical rhythm. */
+h1,h2,h3,h4,h5,h6,
+p,
+table,
+pre,
+hr{
+    margin-bottom:24px;
+    margin-bottom:1.5rem;
+}
+
+/* These handle massive type, for less frequently occuring bits of text (e.g. in mastheads and banners). */
+.giga{
+    font-size:86px;
+    line-height:1.2;    /* 96px */
+	font-weight: 700;
+}
+.mega{
+    font-size:64px;
+    font-size:4rem;     /* 64px */
+    line-height:1.125;  /* 72px */
+	font-weight: 700;
+}
+.kilo{
+    font-size:48px;
+    font-size:3rem;     /* 48px */
+    line-height:1;      /* 48px */
+}
+
+.tall {
+	margin: 20px 0 80px 0;
+	color: #7F7F7F;
+}
+
+/* Define headings and their associated classes here. */
+h1,.alpha{
+    font-size:32px;
+    font-size:2rem;     /* 32px */
+    line-height:1.5;    /* 48px */
+	font-weight: 700;
+}
+h2,.beta{
+    font-size:1.5em;    /* 24px */
+    line-height:1;      /* 24px */
+	font-weight: 700;
+	color: #7f7f7f;
+}
+h3,.gamma{
+    font-size:28px;
+    line-height:1.2;    /* 24px */
+}
+h4,.delta{
+    font-size:18px;
+    font-size:1.125rem; /* 18px */
+    line-height:1.333;  /* 24px */
+}
+h5,.epsilon{
+    font-size:16px;
+    font-size:1rem;     /* 16px */
+    line-height:1.5;    /* 24px */
+}
+h6,.zeta{
+    font-size:16px;
+    font-size:1rem;     /* 16px */
+    line-height:1.5;    /* 24px */
+}
+
+.gamma {
+	font-size: 30px;
+	font-weight: bold;
+	line-height: 1em;
+}
+
+/* Smaller-than-body-copy sizes here. */
+small,.milli {
+    font-size:12px;
+    font-size:0.75rem;  /* 12px */
+    line-height:2;      /* 24px */
+}
+
+h1, h2, h3, h4, h5 {
+	color: #888;
+	font-weight: 100;
+}
+
+h3 {
+	color: #7F0100;
+
+}
+
+.sidebar-right h3 {
+	border: none;
+}
+
+.code, .code-with-comment {
+	font-family: 'Source Code Pro';
+	font-weight: light;
+	margin: 20px 0 0 0;
+	padding: 5px;
+	display: block;
+	line-height: 1.7;
+	background: #00313F;
+	border-bottom: 3px solid #000;
+	color: #fff;
+}
+
+.center {
+	text-align: center;
+}
+
+.code {
+	margin: 20px 0;
+}
+
+.morespace {
+	clear: left;
+	height: 54px;
+}
+
+.slash {
+	color: CadetBlue;
+}
+
+.mod {
+	color: LightGoldenRodYellow;
+}
+
+.math {
+	color: LightGoldenRodYellow;
+}
+
+.num {
+	color: LightGoldenRodYellow;
+}
+.grey {
+	color: Grey;
+}
+.code-input {
+	color: Khaki;
+}
+
+.code-action {
+	color: Chocolate;
+}
+
+.code-view {
+	color: PaleTurquoise;
+}
+
+.comment {
+	font-style: italic;
+	font-size: .9em;
+	padding: 5px;
+	display: block;
+	line-height: 1.2;
+	margin-bottom: 20px;
+	color: #9B9A8B;
+	background: #f5f5dc;
+}
+
+#fluid-container {
+	margin: 0 auto;
+	padding: 10px 2% 10px 2%;
+	max-width: 1100px;
+	background: #fff;
+}
+
+header {
+	width: 100%;
+	height: 60px;
+	background: #f9f9f9;
+	border-bottom: 1px solid #e9e9e9;
+}
+
+.headroom {
+    transition: transform 200ms linear;
+}
+.headroom--pinned {
+    transform: translateY(0%);
+}
+.headroom--unpinned {
+    transform: translateY(-100%);
+}
+
+#nav {
+	margin: 0 auto;
+	max-width: 1110px;
+	height: 60px;
+	line-height: 60px;
+	font-size: 15px;
+}
+
+/* NAVIGATION */
+/* Adapted from code found at http://medialoot.com/blog/how-to-create-a-responsive-navigation-menu-using-only-css/ */
+
+/*Strip the ul of padding and list styling*/
+#nav ul {
+	margin:0;
+	padding:0;
+	position: relative;
+}
+
+/*Create a horizontal list with spacing*/
+#nav ul li {
+	display:inline-block;
+	float: right;
+}
+
+/*Style for menu links*/
+#nav ul li a {
+	display:block;
+	min-width:120px;
+	height: 60px;
+	text-align: center;
+	line-height: 60px;
+	text-decoration: none;
+}
+
+#nav ul li a {
+	color: #444;
+}
+
+#nav ul li a:hover {
+	color: #7F0100;
+}
+
+/*Hover state for top level links*/
+#nav ul li:hover a {
+	color: #009BDC;
+}
+
+/*Style 'show menu' label button and hide it by default*/
+.show-menu {
+	text-decoration: none;
+	width: 110px;
+	margin: 15px 0 0;
+	height: 30px;
+	line-height: 30px;
+	color: #7f7f7f;
+	text-align: center;
+	padding: 0;
+	display: none;
+	background: url('../img/ham.png') no-repeat;
+	cursor: pointer;
+	float: right;
+}
+.show-menu:hover, .show-menu:active {
+	color: #999;
+	background-position: 0 -30;
+}
+
+/*Hide checkbox*/
+#nav input[type=checkbox]{
+    display: none;
+}
+
+/*Show menu when invisible checkbox is checked*/
+#nav input[type=checkbox]:checked ~ #menu{
+    display: block;
+}
+
+/*Show menu button grey when invisible checkbox is checked*/
+#nav input[type=checkbox]:checked ~ .show-menu{
+	color: #999;
+}
+
+.alert-danger {
+	color: #7F0100;
+	background: #ffe6e6;
+	padding: 0 10px;
+	border: 1px #ffb3b3 dashed;
+}
+
+/* END NAVIGATION */
+
+.twobox {
+	width: 48%;
+	float: left;
+	padding: 60px 5px;
+	margin-bottom: 24px;
+}
+	
+button {
+    background-color: #3B58B8;
+	border: 1px solid transparent;
+    color: white;
+    padding: 8px 17px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 10px 2px;
+    cursor: pointer;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+
+button:hover {
+    text-decoration: underline;
+}
+
+.clear {
+	width: 100%;
+	height: 1px;
+	clear: both;
+}
+
+.contain {
+	margin: 0 auto;
+	max-width: 1110px;
+}
+
+#logo {
+	margin: 10px 0 0 0;
+	float: left;
+}
+
+.main-nav {
+	width: 45%;
+	float: left;
+}
+
+.secondary-nav {
+	width: 25%;
+	float: right;
+}
+
+.signup {
+	background: #6F730F;
+	height: 25px;
+	line-height: 25px;
+}
+
+.addspace {
+	height: 70px;
+	width: 100%;
+	clear: both;
+}
+	
+.bigbanner {
+	width: 100%;
+	height: 560px;
+	clear: both;
+	overflow: hidden;
+	text-align: center;
+}
+
+#topbanner {
+	background: url('../images/horizon.jpg');
+	background-size: 100% auto;
+	background-position: center center;
+}
+
+#topbanner h2 {
+	color: #fff;
+}
+
+#topbanner p {
+	color: #fff;
+}
+
+.pagebanner {
+	width: 100%;
+	clear: both;
+	overflow: hidden;
+	text-align: center;
+	background-size: 100% auto;
+	height: 340px;
+}
+
+.pagebanner .addspace {
+	height: 80px;
+}
+
+.spacer {
+	clear: both;
+	height: 15px;
+}
+
+#companybanner {
+	background: url('../images/vineyard.jpg');
+	background-position: center -60px;
+	background-size: 100% auto;
+}	
+
+#companybanner h1 {
+	color: #fff;
+	text-shadow: #516E99 2px 2px 5px;
+}
+
+#contactbanner h1, #teambanner h1, #modelbanner h1, #qrbanner h1, #quantosbanner h1 {
+	color: #fff;
+	text-shadow: #2C2B1F 2px 2px 5px;
+}
+
+#teambanner, #contactbanner, #modelbanner, #qrbanner, #quantosbanner {
+	background: url('../images/vineyard-path.JPG');
+	background-position: center 0;
+	background-size: 100% auto;
+}
+
+#contactbanner {
+	background-position: center bottom;	
+}
+
+#modelbanner {
+	background-position: center top;	
+}
+
+#qrbanner {
+	background-position: center center;	
+}
+
+#quantosbanner {
+	background-position: right bottom;	
+}
+
+#content {
+	width: 66%;
+	margin: 0;
+	min-height: 40%;
+}
+
+#content img {
+	float: left;
+	margin: 0 20px 20px 0;
+}
+
+.sidebar-right {
+	width: 31%;
+	float: right;
+	background: #f9f9f9;
+	border-left: 1px solid #eee;
+	margin: 0 0 0 3%;
+	padding: 0 2%;
+	position: fixed;
+	top: 20px;
+	right: 0;
+	opacity: .6;
+}
+
+#foot {
+	width: 100%;
+	height: 100px;
+	font-size: 16px;
+	background: #f9f9f9;
+	border-top: 1px solid #e9e9e9;
+}
+
+#footsection {
+	width: 100%;
+	clear: both;
+	font-size: 14px;
+	height: 70px;
+	text-align: left;
+	padding: 0 0;
+}
+
+.menublock {
+	width: 175px;
+	float: left;
+}
+
+.menublock li, .menublock ul li {
+	display:inline;
+	float: left;
+	text-align: left;
+	clear: left;
+}
+
+.menublock ul ul {
+	padding-left: 4px;
+}
+
+.menublock ul li a {
+	display:inline;
+	width: auto;
+	min-width: 0;
+	height: auto;
+	text-align: left;
+	line-height: 1.5em;
+	background: none;
+	color: #888;
+	text-decoration: none;
+}
+
+#logoblock {
+	padding-top: 20px;
+	margin-right: 60px;
+}
+
+#content ul li {
+	list-style-type: disc;
+	margin: 0 0 10px 10px;
+}
+
+#content ul ul, #content ul ul li {
+	list-style: circle;
+}
+
+#content li, #content ul li, #content ul ul li {
+	display: list-item;
+	float: none;
+	text-align: left;
+	clear: left;
+}
+
+#foot a {
+	color: #888;
+	text-decoration: none;
+}
+
+#foot a:hover, .menublock ul ul li a:hover {
+	text-decoration: none;
+	color: #3B58B8;
+}
+
+#foot div#footsection ul {
+	list-style: none;
+	padding-left: 0px;
+}
+
+#foot div#footsection ul > li {
+	display: inline-block;
+	padding-right: 10px;
+	padding-left: 10px;
+	border-right: 1px solid #888888;
+}
+
+#foot div#footsection ul > li:first-child {
+	padding-left: 0px;
+}
+#foot div#footsection ul > li:last-child {
+	border-right: none;
+}
+
+.title {
+	font-weight: 400;
+	padding: 5px;
+}
+
+.bio {
+	width: 66%;
+	margin: 20px 0 100px 0;
+}
+
+.bio img {
+	float: left;
+	margin: 0 15px 0 0;
+	
+}
+
+form {
+    margin-bottom: 40px;
+}
+textarea, input[type="textarea"], input[type="text"], input[type="text"], input[type="email"], input[type="password"], input[type="search"], select, input[readonly="readonly"] {
+    padding: 12px 10px;
+	font-size: 18px;
+	background: #fcfcfc;
+	color: #000;
+	border: 1px solid #e2e2e2;
+	border-bottom: 2px solid #d9d9d9;
+	border-radius: 5px;
+	width: 75%;
+	margin-bottom: 30px;
+}
+
+input[type="text"].short {
+    padding: 4px 12px;
+	width: 25%;
+}
+
+input[readonly] {
+	background: #f9f9f9;
+	color: #aaa;
+	border: 1px solid #eee;
+	border-bottom: 2px solid #eee;
+}
+
+input[type="submit"], input[type="button"] {
+    background: -webkit-linear-gradient(#3B58B8, #1C2B62); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#3B58B8, #1C2B62); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#3B58B8, #1C2B62); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#3B58B8, #1C2B62); /* Standard syntax (must be last) */
+	padding: 15px 20px;
+	font-size: 18px;
+	font-weight: normal;
+	color: #fff;
+	border-radius: 5px;
+	border-width: 1px;
+	border-bottom-color: #ddd;
+	border-right-color: #ddd;
+	border-top-color: #eee;
+	border-left-color: #eee; 
+}
+input[type="submit"]:hover, input[type="submit"]:focus, input[type="button"]:hover, input[type="button"]:focus {
+    background: -webkit-linear-gradient(#1C2B62, #3B58B8); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#1C2B62, #3B58B8); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#1C2B62, #3B58B8); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#1C2B62, #3B58B8); /* Standard syntax (must be last) */
+	cursor: pointer;
+}
+
+label {
+	font-size: 16px;
+	padding-top: 0;
+	font-weight: 400;
+    color: #7F0100;
+}
+
+h4.signup-troubles {
+	margin-bottom: 0px;
+}
+
+/* MEDIA QUERIES */
+
+/*
+@media screen and (min-width : 1550px){
+	#topbanner {
+		background-position: 0 -150px;
+	}
+}
+*/
+
+@media screen and (max-width : 1400px){
+	#topbanner {
+		background-position: center center;
+		background-size: auto 100%;
+	}
+}
+
+/*
+@media screen and (max-width : 1000px){
+	#topbanner {
+		background-size: 140%;
+		background-position: center top;
+	}
+}
+
+@media screen and (max-width : 885px){
+	#topbanner {
+		background-size: 160%;
+		background-position: center top;
+	}
+}
+*/
+
+@media screen and (max-width : 680px){
+	body {
+		background: #fff;
+	}
+	.addspace {
+		height: 25px;
+	}
+	.bigbanner {
+		height: 270px;
+	}
+	#topbanner h2, #companybanner h1, #teambanner h1, #contactbanner h1, #modelbanner h1 {
+		font-size: 200%;
+	}
+	#topbanner p {
+		font-size: 100%;
+	}
+	#companybanner {
+		background-size: 100% auto;
+		height: 220px;
+		background-position: 0 30px;
+	}
+	#contactbanner, #modelbanner {
+		height: 220px;
+		background-size: 100% auto;
+	}
+	#teambanner {
+		background-size: 100% auto;
+		height: 220px;
+		background-position: center center;
+	}
+	.pagebanner .addspace {
+		height: 95px;
+	}
+	#fluid-container {
+		margin: 0;
+		padding: 0;
+		max-width: 100%;
+		border: none;
+	}
+	.twobox {
+		width: 100%;
+		float: left;
+		padding: 20px 5px;
+		margin-bottom: 24px;
+	}
+	#content, .bio {
+		width: 100%;
+		min-width: 0;
+		margin: 5px 5px 50px 5px;
+		clear: both;
+	}
+	.sidebar-right {
+		width: 100%;
+		border-left: none;
+		margin: 0;
+		padding: 0 0.5%;
+		position: relative;
+		background: #f9f9f9;
+	}
+	/* For navigation, Make dropdown links appear inline*/
+	ul {
+		position: static;
+		display: none;
+	}
+	/*Create vertical spacing*/
+	/*Make all menu links full width*/
+	ul li, li a {
+		width: 100%;
+	}
+	/*Display 'show menu' link*/
+	.show-menu {
+		display:block;
+		float: left
+	}
+	li.dropper1 a, li.dropper2 a , li.dropper1:hover a, li.dropper1 a:active, li.dropper2:hover a, li.dropper2 a:active {
+		background-image: none;
+	}
+	.menublock {
+		width: 100%;
+	}
+}
+
+.small-text {
+	font-size: 0.8em;
+}
+
+.medium-text {
+	font-size: 1.2em;
+}
+
+.large-text {
+	font-size: 1.4em;
+}
+
+/*
+@media screen and (max-width : 570px){
+	#topbanner {
+		background-size: 150%;
+		background-position: center top;
+	}
+}
+
+@media screen and (max-width : 400px){
+	#topbanner {
+		background-size: 170%;
+		background-position: center top;
+	}
+}
+*/

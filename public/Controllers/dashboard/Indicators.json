@@ -1,0 +1,594 @@
+[
+  {
+    "description": "Plot Value",
+    "name": "dx",
+    "param1": "barsback",
+    "param2": "",
+    "param3": "",
+    "usage": "dx(barsback=1)"
+  },
+  {
+    "description": "True Strength Index",
+    "name": "tsi",
+    "param1": "fastlength",
+    "param2": "slowlength",
+    "param3": "innerlength",
+    "usage": "tsi(fastlength=10, slowlength=5, innerlength=10)"
+  },
+  {
+    "description": "Triple Exponential Moving Average",
+    "name": "xavg3x",
+    "param1": "fastlength",
+    "param2": "slowlength",
+    "param3": "innerlength",
+    "usage": "xavg3x(fastlength=10, slowlength=5, innerlength=10)"
+  },
+  {
+    "description": "Moving Average Convergence/Divergence",
+    "name": "macd",
+    "param1": "fastlength",
+    "param2": "slowlength",
+    "param3": "",
+    "usage": "macd(fastlength=5, slowlength=10)"
+  },
+  {
+    "description": "Absolute Price Oscillator [TA-Lib]",
+    "name": "ta_apo",
+    "param1": "fastperiod",
+    "param2": "slowperiod",
+    "param3": "matype",
+    "usage": "ta_apo(fastperiod=12, slowperiod=26, matype=0)"
+  },
+  {
+    "description": "Percentage Price Oscillator [TA-Lib]",
+    "name": "ta_ppo",
+    "param1": "fastperiod",
+    "param2": "slowperiod",
+    "param3": "matype",
+    "usage": "ta_ppo(fastperiod=12, slowperiod=26, matype=0)"
+  },
+  {
+    "description": "Adaptive moving Average",
+    "name": "adma",
+    "param1": "length",
+    "param2": "fastlength",
+    "param3": "slowlength",
+    "usage": "adma(length=10, fastlength=5, slowlength=10)"
+  },
+  {
+    "description": "HDelta",
+    "name": "hdelta",
+    "param1": "length",
+    "param2": "type",
+    "param3": "",
+    "usage": "hdelta(length=10, type=a)"
+  },
+  {
+    "description": "Double Exponential Moving Average",
+    "name": "dema",
+    "param1": "length",
+    "param2": "volumefactor",
+    "param3": "",
+    "usage": "dema(length=10, volumefactor=1.0)"
+  },
+  {
+    "description": "Generalized Double Exponential Moving Average",
+    "name": "gd",
+    "param1": "length",
+    "param2": "volumefactor",
+    "param3": "",
+    "usage": "gd(length=10, volumefactor=0.7)"
+  },
+  {
+    "description": "Tilson Moving Average",
+    "name": "tilson",
+    "param1": "length",
+    "param2": "volumefactor",
+    "param3": "",
+    "usage": "tilson(length=10, volumefactor=0.7)"
+  },
+  {
+    "description": "Arctangent",
+    "name": "atan",
+    "param1": "length",
+    "param2": "",
+    "param3": "",
+    "usage": "atan(length=10)"
+  },
+  {
+    "description": "Exponential Moving Average",
+    "name": "ema",
+    "param1": "length",
+    "param2": "",
+    "param3": "",
+    "usage": "ema(length=10)"
+  },
+  {
+    "description": "Exponential Moving Average",
+    "name": "ewma",
+    "param1": "length",
+    "param2": "",
+    "param3": "",
+    "usage": "ewma(length=10)"
+  },
+  {
+    "description": "Gaussian Indicator",
+    "name": "gauss",
+    "param1": "length",
+    "param2": "",
+    "param3": "",
+    "usage": "gauss(length=10)"
+  },
+  {
+    "description": "Momentum Indicator",
+    "name": "momo",
+    "param1": "length",
+    "param2": "",
+    "param3": "",
+    "usage": "momo(length=10)"
+  },
+  {
+    "description": "Relative Strength Index",
+    "name": "rsi",
+    "param1": "length",
+    "param2": "",
+    "param3": "",
+    "usage": "rsi(length=10)"
+  },
+  {
+    "description": "Simple Moving Average",
+    "name": "savg",
+    "param1": "length",
+    "param2": "",
+    "param3": "",
+    "usage": "savg(length=10)"
+  },
+  {
+    "description": "Simple Moving Average",
+    "name": "sma",
+    "param1": "length",
+    "param2": "",
+    "param3": "",
+    "usage": "sma(length=10)"
+  },
+  {
+    "description": "Tilson's T3 Indicator",
+    "name": "t3",
+    "param1": "length",
+    "param2": "",
+    "param3": "",
+    "usage": "t3(length=10)"
+  },
+  {
+    "description": "Weighted Moving Average",
+    "name": "wavg",
+    "param1": "length",
+    "param2": "",
+    "param3": "",
+    "usage": "wavg(length=10)"
+  },
+  {
+    "description": "Weighted Moving Average",
+    "name": "wma",
+    "param1": "length",
+    "param2": "",
+    "param3": "",
+    "usage": "wma(length=10)"
+  },
+  {
+    "description": "Exponential Moving Average",
+    "name": "xavg",
+    "param1": "length",
+    "param2": "",
+    "param3": "",
+    "usage": "xavg(length=10)"
+  },
+  {
+    "description": "Hull Moving Average",
+    "name": "hma",
+    "param1": "length",
+    "param2": "",
+    "param3": "",
+    "usage": "hma(length=16)"
+  },
+  {
+    "description": "Moving Average [TA-Lib]",
+    "name": "ta_ma",
+    "param1": "timeperiod",
+    "param2": "matype",
+    "param3": "",
+    "usage": "ta_ma(timeperiod=30, matype=0)"
+  },
+  {
+    "description": "Standard Deviation [TA-Lib]",
+    "name": "ta_stddev",
+    "param1": "timeperiod",
+    "param2": "nbdev",
+    "param3": "",
+    "usage": "ta_stddev(timeperiod=5, nbdev=1)"
+  },
+  {
+    "description": "Variance [TA-Lib]",
+    "name": "ta_var",
+    "param1": "timeperiod",
+    "param2": "nbdev",
+    "param3": "",
+    "usage": "ta_var(timeperiod=5, nbdev=1)"
+  },
+  {
+    "description": "Triple Exponential Moving Average (T3) [TA-Lib]",
+    "name": "ta_t3",
+    "param1": "timeperiod",
+    "param2": "vfactor",
+    "param3": "",
+    "usage": "ta_t3(timeperiod=5, vfactor=0)"
+  },
+  {
+    "description": "Momentum [TA-Lib]",
+    "name": "ta_mom",
+    "param1": "timeperiod",
+    "param2": "",
+    "param3": "",
+    "usage": "ta_mom(timeperiod=10)"
+  },
+  {
+    "description": "Rate of Change: ((price/prevPrice)-1)*100 [TA-Lib]",
+    "name": "ta_roc",
+    "param1": "timeperiod",
+    "param2": "",
+    "param3": "",
+    "usage": "ta_roc(timeperiod=10)"
+  },
+  {
+    "description": "Rate of Change Percentage: (price-prevPrice)/prevPrice [TA-Lib]",
+    "name": "ta_rocp",
+    "param1": "timeperiod",
+    "param2": "",
+    "param3": "",
+    "usage": "ta_rocp(timeperiod=10)"
+  },
+  {
+    "description": "Rate of Change Ratio: (price/prevPrice) [TA-Lib]",
+    "name": "ta_rocr",
+    "param1": "timeperiod",
+    "param2": "",
+    "param3": "",
+    "usage": "ta_rocr(timeperiod=10)"
+  },
+  {
+    "description": "Rate of Change Ratio 100 scale: (price/prevPrice)*100 [TA-Lib]",
+    "name": "ta_rocr100",
+    "param1": "timeperiod",
+    "param2": "",
+    "param3": "",
+    "usage": "ta_rocr100(timeperiod=10)"
+  },
+  {
+    "description": "Chande Momentum Oscillator [TA-Lib]",
+    "name": "ta_cmo",
+    "param1": "timeperiod",
+    "param2": "",
+    "param3": "",
+    "usage": "ta_cmo(timeperiod=14)"
+  },
+  {
+    "description": "Linear Regression [TA-Lib]",
+    "name": "ta_linearreg",
+    "param1": "timeperiod",
+    "param2": "",
+    "param3": "",
+    "usage": "ta_linearreg(timeperiod=14)"
+  },
+  {
+    "description": "Linear Regression Angle [TA-Lib]",
+    "name": "ta_linearreg_angle",
+    "param1": "timeperiod",
+    "param2": "",
+    "param3": "",
+    "usage": "ta_linearreg_angle(timeperiod=14)"
+  },
+  {
+    "description": "Linear Regression Intercept [TA-Lib]",
+    "name": "ta_linearreg_intercept",
+    "param1": "timeperiod",
+    "param2": "",
+    "param3": "",
+    "usage": "ta_linearreg_intercept(timeperiod=14)"
+  },
+  {
+    "description": "Linear Regression Slope [TA-Lib]",
+    "name": "ta_linearreg_slope",
+    "param1": "timeperiod",
+    "param2": "",
+    "param3": "",
+    "usage": "ta_linearreg_slope(timeperiod=14)"
+  },
+  {
+    "description": "MidPoint Over Period [TA-Lib]",
+    "name": "ta_midpoint",
+    "param1": "timeperiod",
+    "param2": "",
+    "param3": "",
+    "usage": "ta_midpoint(timeperiod=14)"
+  },
+  {
+    "description": "Relative Strength Index [TA-Lib]",
+    "name": "ta_rsi",
+    "param1": "timeperiod",
+    "param2": "",
+    "param3": "",
+    "usage": "ta_rsi(timeperiod=14)"
+  },
+  {
+    "description": "Time Series Forecast [TA-Lib]",
+    "name": "ta_tsf",
+    "param1": "timeperiod",
+    "param2": "",
+    "param3": "",
+    "usage": "ta_tsf(timeperiod=14)"
+  },
+  {
+    "description": "Double Exponential Moving Average [TA-Lib]",
+    "name": "ta_dema",
+    "param1": "timeperiod",
+    "param2": "",
+    "param3": "",
+    "usage": "ta_dema(timeperiod=30)"
+  },
+  {
+    "description": "Exponential Moving Average [TA-Lib]",
+    "name": "ta_ema",
+    "param1": "timeperiod",
+    "param2": "",
+    "param3": "",
+    "usage": "ta_ema(timeperiod=30)"
+  },
+  {
+    "description": "Kaufman Adaptive Moving Average [TA-Lib]",
+    "name": "ta_kama",
+    "param1": "timeperiod",
+    "param2": "",
+    "param3": "",
+    "usage": "ta_kama(timeperiod=30)"
+  },
+  {
+    "description": "Highest value over a specified period [TA-Lib]",
+    "name": "ta_max",
+    "param1": "timeperiod",
+    "param2": "",
+    "param3": "",
+    "usage": "ta_max(timeperiod=30)"
+  },
+  {
+    "description": "Lowest value over a specified period [TA-Lib]",
+    "name": "ta_min",
+    "param1": "timeperiod",
+    "param2": "",
+    "param3": "",
+    "usage": "ta_min(timeperiod=30)"
+  },
+  {
+    "description": "Simple Moving Average [TA-Lib]",
+    "name": "ta_sma",
+    "param1": "timeperiod",
+    "param2": "",
+    "param3": "",
+    "usage": "ta_sma(timeperiod=30)"
+  },
+  {
+    "description": "Summation [TA-Lib]",
+    "name": "ta_sum",
+    "param1": "timeperiod",
+    "param2": "",
+    "param3": "",
+    "usage": "ta_sum(timeperiod=30)"
+  },
+  {
+    "description": "Triple Exponential Moving Average [TA-Lib]",
+    "name": "ta_tema",
+    "param1": "timeperiod",
+    "param2": "",
+    "param3": "",
+    "usage": "ta_tema(timeperiod=30)"
+  },
+  {
+    "description": "Triangular Moving Average [TA-Lib]",
+    "name": "ta_trima",
+    "param1": "timeperiod",
+    "param2": "",
+    "param3": "",
+    "usage": "ta_trima(timeperiod=30)"
+  },
+  {
+    "description": "1-day Rate-Of-Change (ROC) of a Triple Smooth EMA [TA-Lib]",
+    "name": "ta_trix",
+    "param1": "timeperiod",
+    "param2": "",
+    "param3": "",
+    "usage": "ta_trix(timeperiod=30)"
+  },
+  {
+    "description": "Weighted Moving Average [TA-Lib]",
+    "name": "ta_wma",
+    "param1": "timeperiod",
+    "param2": "",
+    "param3": "",
+    "usage": "ta_wma(timeperiod=30)"
+  },
+  {
+    "description": "Cumulative value",
+    "name": "cume",
+    "param1": "",
+    "param2": "",
+    "param3": "",
+    "usage": "cume()"
+  },
+  {
+    "description":"Proprietary Cumulative value",
+    "name": "qcume",
+    "param1": "",
+    "param2": "",
+    "param3": "",
+    "usage": "qcume()"
+  },
+  {
+    "description": "Arccosine [TA-Lib]",
+    "name": "ta_acos",
+    "param1": "",
+    "param2": "",
+    "param3": "",
+    "usage": "ta_acos()"
+  },
+  {
+    "description": "Arcsine [TA-Lib]",
+    "name": "ta_asin",
+    "param1": "",
+    "param2": "",
+    "param3": "",
+    "usage": "ta_asin()"
+  },
+  {
+    "description": "Arctangent [TA-Lib]",
+    "name": "ta_atan",
+    "param1": "",
+    "param2": "",
+    "param3": "",
+    "usage": "ta_atan()"
+  },
+  {
+    "description": "Ceiling [TA-Lib]",
+    "name": "ta_ceil",
+    "param1": "",
+    "param2": "",
+    "param3": "",
+    "usage": "ta_ceil()"
+  },
+  {
+    "description": "Cosine [TA-Lib]",
+    "name": "ta_cos",
+    "param1": "",
+    "param2": "",
+    "param3": "",
+    "usage": "ta_cos()"
+  },
+  {
+    "description": "Hyperbolic Cosine [TA-Lib]",
+    "name": "ta_cosh",
+    "param1": "",
+    "param2": "",
+    "param3": "",
+    "usage": "ta_cosh()"
+  },
+  {
+    "description": "Natural Exponentiation [TA-Lib]",
+    "name": "ta_exp",
+    "param1": "",
+    "param2": "",
+    "param3": "",
+    "usage": "ta_exp()"
+  },
+  {
+    "description": "Floor [TA-Lib]",
+    "name": "ta_floor",
+    "param1": "",
+    "param2": "",
+    "param3": "",
+    "usage": "ta_floor()"
+  },
+  {
+    "description": "Hilbert Transform - Dominant Cycle Period [TA-Lib]",
+    "name": "ta_ht_dcperiod",
+    "param1": "",
+    "param2": "",
+    "param3": "",
+    "usage": "ta_ht_dcperiod()"
+  },
+  {
+    "description": "Hilbert Transform - Dominant Cycle Phase [TA-Lib]",
+    "name": "ta_ht_dcphase",
+    "param1": "",
+    "param2": "",
+    "param3": "",
+    "usage": "ta_ht_dcphase()"
+  },
+  {
+    "description": "Hilbert Transform - Instantaneous Trendline [TA-Lib]",
+    "name": "ta_ht_trendline",
+    "param1": "",
+    "param2": "",
+    "param3": "",
+    "usage": "ta_ht_trendline()"
+  },
+  {
+    "description": "Natural Log [TA-Lib]",
+    "name": "ta_ln",
+    "param1": "",
+    "param2": "",
+    "param3": "",
+    "usage": "ta_ln()"
+  },
+  {
+    "description": "Log Base 10 [TA-Lib]",
+    "name": "ta_log10",
+    "param1": "",
+    "param2": "",
+    "param3": "",
+    "usage": "ta_log10()"
+  },
+  {
+    "description": "Sine [TA-Lib]",
+    "name": "ta_sin",
+    "param1": "",
+    "param2": "",
+    "param3": "",
+    "usage": "ta_sin()"
+  },
+  {
+    "description": "Hyperbolic Sine [TA-Lib]",
+    "name": "ta_sinh",
+    "param1": "",
+    "param2": "",
+    "param3": "",
+    "usage": "ta_sinh()"
+  },
+  {
+    "description": "Square Root [TA-Lib]",
+    "name": "ta_sqrt",
+    "param1": "",
+    "param2": "",
+    "param3": "",
+    "usage": "ta_sqrt()"
+  },
+  {
+    "description": "Tangent [TA-Lib]",
+    "name": "ta_tan",
+    "param1": "",
+    "param2": "",
+    "param3": "",
+    "usage": "ta_tan()"
+  },
+  {
+    "description": "Hyperbolic Tangent [TA-Lib]",
+    "name": "ta_tanh",
+    "param1": "",
+    "param2": "",
+    "param3": "",
+    "usage": "ta_tanh()"
+  },
+  {
+    "description": "Ternary View",
+    "name": "tern",
+    "param1": "zerolimit",
+    "param2": "",
+    "param3": "",
+    "usage": "tern(zerolimit=0)"
+  },
+  {
+    "description": "Ternary View",
+    "name": "ternary",
+    "param1": "zerolimit",
+    "param2": "",
+    "param3": "",
+    "usage": "ternary(zerolimit=0)"
+  }
+  ]

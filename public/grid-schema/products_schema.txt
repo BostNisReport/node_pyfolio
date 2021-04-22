@@ -1,0 +1,30 @@
+﻿{
+    width: "100%",
+    height: "100%",
+    altrows: false,
+    virtualmode: false,
+    editable: true,
+    sortable: true,
+	groupable: true,
+	enabletooltips: true,
+    columnsresize: true,
+    columnsreorder: true,
+    selectionmode: "multiplecellsadvanced",
+    columns: [
+        { text: "Supplier Name", cellsalign: "left", align: "center", datafield: "SupplierName", width: 110,type: "string" },
+        { text: "Name", columngroup: "ProductDetails", cellsalign: "left", align: "center", datafield: "ProductName", width: 150,type: "string" },
+        { text: "Quantity", columngroup: "ProductDetails", datafield: "Quantity", cellsformat: "d", cellsalign: "center", align: "center", width: 80,type: "number" },
+        { text: "Freight", columngroup: "OrderDetails", datafield: "Freight", cellsformat: "d", cellsalign: "center", align: "center", width: 100,type: "number" },
+        { text: "Order Date", columngroup: "OrderDetails", cellsalign: "left", align: "center", cellsformat: "d", datafield: "OrderDate", width: 100,type: "Date" },
+        { text: "Order Address", columngroup: "OrderDetails", cellsalign: "left", align: "center", datafield: "OrderAddress", width: 100,type: "string" },
+        { text: "Price", columngroup: "ProductDetails", datafield: "Price", cellsformat: "c2", align: "center", cellsalign: "center", width: 70,type: "number" },
+        { text: "Address", columngroup: "Location", cellsalign: "left", align: "center", datafield: "Address", width: 120,type: "string" },
+        { text: "City", columngroup: "Location", cellsalign: "center", align: "center", datafield: "City", width: 80,type: "string" }
+    ],
+    columngroups: [
+        { text: "Product Details", align: "center", name: "ProductDetails" },
+        { text: "Order Details", parentgroup: "ProductDetails", align: "center", name: "OrderDetails" },
+        { text: "Location", align: "center", name: "Location" }
+    ],
+	 //groups: ["City"]
+}

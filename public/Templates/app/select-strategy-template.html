@@ -1,0 +1,7 @@
+﻿<div class="alert alert-danger" role="alert" ng-show="settings.alertMessage">{{settings.alertMessage}}</div>
+<div class="list-group" style="max-height:200px;overflow:auto">
+    <a href="#strategy={{strategy.name}}" class="list-group-item" ng-repeat="strategy in settings.strategies"
+       ng-class="{active:strategy.selected}" ng-click="settings.selectStrategy(strategy)" my-dbclick="ok()">
+        {{strategy.name}}
+    </a>
+</div>

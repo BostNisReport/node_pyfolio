@@ -1,0 +1,73 @@
+<div ng-controller="DashboardLibrariesBacktestsController" class="fill-height">
+    
+    <div my-splitter orientation="horizontal" show-split-bar="false" style="border-color:transparent" ng-show="!showLoading&&view=='startPage'">
+
+        <div size="50%" collapsed="true">
+            <div dashboard-chart-area id="backtestsChart"></div>
+        </div>
+
+        <div class="container-margin-left-right">
+
+            <div class="fill-height">
+                <table id="backtestsTable" class="table table-hover table-striped"></table>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <a href="" ng-click="importCsvFile()" class="import-csv-button" ng-show="!showLoading&&view=='backtestChartPage'">Import CSV</a>
+    <div my-splitter orientation="horizontal" show-split-bar="true" style="border-color:transparent" ng-show="!showLoading&&view=='backtestChartPage'">
+
+        <div size="50%" dock-panel collapsed="false">
+            <div dock="top">
+                <br />
+                <a href="#" class="back-link">
+                    <span class="glyphicon glyphicon-arrow-left"></span>
+                    <span class="backtest-name-label">Backtest {{openedBacktest.output_key}} Results</span>
+                </a>
+            </div>
+            <div dock="fill">
+                <div dashboard-chart-area id="backtest-summary-chart"></div>
+            </div>
+        </div>
+
+        <div class="container-margin-left-right">
+
+            <div class="fill-height">
+                <div dock-panel>
+                    <div dock="top" style="height:110px">
+                        <table id="summaryTable" class="table table-hover table-striped"></table>
+                    </div>
+                    <div dock="top"><h4>Trade results</h4></div>
+                    <div dock="fill">
+                        <table id="outputsTable" class="table table-hover table-striped"></table>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+
+
+    <div dock-panel ng-show="!showLoading&&view=='backtestReportPage'">
+        <div dock="top">
+            <br />
+            <a href="#" class="back-link">
+                <span class="glyphicon glyphicon-arrow-left"></span>
+                <span class="backtest-name-label">Backtest {{openedBacktest.output_key}} Results</span>
+            </a>
+        </div>
+        <div dock="fill">
+            <iframe id="backtest-summary-report" style="border:0px;height:100%;width:100%;overflow-y:auto"></iframe>
+        </div>
+    </div>
+    <img src="/static_files/images/loading-bar.gif?lastModified=20170511T2118" class="centered" ng-show="showLoading">
+</div>

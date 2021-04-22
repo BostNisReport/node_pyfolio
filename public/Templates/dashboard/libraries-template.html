@@ -1,0 +1,20 @@
+﻿<div dock-panel>
+
+    <div dock="top">
+        <!--Sidebar content-->
+        <ul class="nav nav-tabs">
+            <li role="presentation" ng-repeat="view in tabs.views" ng-class="{active: tabs.selectedView==$index}">
+                <a href="#tab={{view.title}}" ng-click="tabs.selectTab($index)" ng-class="{'not-active': !view.active}">{{view.title}}</a>
+            </li>
+        </ul>
+        <img src="/static_files/images/loading.gif?lastModified=20160909T1938" class="centered" ng-show="tabs.isLoading">
+
+    </div>
+
+    <div class="content-div" dock="fill">
+        <!--Body content-->
+
+    </div>
+
+
+</div>

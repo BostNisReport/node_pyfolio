@@ -1,0 +1,41 @@
+﻿<form class="form-horizontal">
+
+    <div class="form-group">
+        <a href="" class="btn btn-default" ng-click="settings.deleteAnnotation();cancel()">Delete Annotation</a>
+    </div>
+    <div class="form-group" style="margin-bottom:0px">
+        <label class="col-sm-2">Movable</label>
+        <label class="col-sm-3"><input type="checkbox" ng-model="settings.movableHorizontally">Horizontally</label>
+        <label class="col-sm-3"><input type="checkbox" ng-model="settings.movableVertically">Vertically</label>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2">Draggable</label>
+        <label class="col-sm-3"><input type="checkbox" ng-model="settings.draggableX">Horizontally</label>
+        <label class="col-sm-3"><input type="checkbox" ng-model="settings.draggableY">Vertically</label>
+    </div>
+    <div class="form-group" ng-show="settings.options.type=='Label'">
+        <label for="inputLabelText">Label text</label>
+        <input type="text" class="form-control" id="inputLabelText" placeholder="label text" ng-model="settings.options.text">
+    </div>
+
+
+    <div class="form-group">
+        <a href="" class="btn btn-default" ng-click="showMore=true" ng-show="!showMore">More...</a>
+    </div>
+
+    <div class="form-group" ng-show="showMore">
+        <label for="inputFillColor">Fill Color</label>
+        <input type="text" class="form-control color-control" id="inputFillColor" placeholder="background color" ng-model="settings.options.shapeAttr.fill">
+    </div>
+
+    <div class="form-group" ng-show="showMore">
+        <label for="inputBorderColor">Border Color</label>
+        <input type="text" class="form-control  color-control" id="inputBorderColor" placeholder="border color" ng-model="settings.options.shapeAttr.stroke">
+    </div>
+
+    <div class="form-group" ng-show="showMore">
+        <label for="inputBorderWidth">Border Width</label>
+        <input type="number" class="form-control" id="inputBorderWidth" placeholder="border width" ng-model="settings.options.shapeAttr['stroke-width']">
+    </div>
+
+</form>

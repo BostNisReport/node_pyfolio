@@ -1,0 +1,14 @@
+﻿<div my-splitter orientation="vertical" show-split-bar="{{!utilities.isMobile()}}">
+
+    <div size="{{utilities.isMobile()?50:20}}%" collapsed="true">
+        <div style="height:100%">
+            <div chart-tabs-manager="strategy.chartTabsManager" chart-drop-div></div>
+        </div>
+    </div>
+
+    <div>
+        <div chart-with-table></div>
+    </div>
+
+
+</div>

@@ -1,0 +1,35 @@
+﻿<form class="form-horizontal">
+
+    <div class="form-group">
+        <label for="inputSeriesName">Series name</label>
+        <input type="text" class="form-control" id="inputSeriesName" placeholder="Series name" ng-model="settings.seriesName">
+        <span class="help-block" ng-show="settings.errorText">{{settings.errorText}}</span>
+    </div>
+
+
+    <div class="form-group">
+        <label>Chart type</label>
+        <div class="dropdown">
+            <button class="btn btn-default  form-control dropdown-toggle" data-toggle="dropdown">{{settings.selectedChartType || 'Select'}}<b class="caret"></b></button>
+            <ul class="dropdown-menu">
+                <li ng-repeat="type in settings.chartTypes"><a href="#" ng-click="settings.selectedChartType=type">{{type}}</a></li>
+            </ul>
+        </div>
+        <span class="help-block" ng-show="!settings.selectedChartType && settings.chartTypeMissed">Chart type missed</span>
+    </div>
+
+    <div class="form-group">
+        <label>Chart panel</label>
+        <div class="dropdown">
+            <button class="btn btn-default  form-control dropdown-toggle" data-toggle="dropdown">{{settings.chartPanels[settings.selectedChartPanel].title.text || settings.selectedChartPanel || 'Select'}}<b class="caret"></b></button>
+            <ul class="dropdown-menu">
+                <li ng-repeat="panel in settings.chartPanels"><a href="" ng-click="settings.selectedChartPanel=$index">{{panel.title.text}}</a></li>
+                <li ><a href="#" ng-click="settings.selectedChartPanel='New Panel'">New Panel</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="form-group" ng-show="settings.selectedChartPanel=='New Panel'">
+        <input class="form-control" id="inputPanelTitle" placeholder="Panel title" ng-model="settings.newPanelTitle">
+    </div>
+</form>

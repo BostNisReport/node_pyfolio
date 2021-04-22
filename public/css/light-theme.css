@@ -1,0 +1,36 @@
+
+.light-theme ,
+.light-theme .all-content-container,
+.light-theme .jqx-widget-content,
+.light-theme .nav-tabs>li.active>a
+{
+    background-color:#fff
+}
+.light-theme .bootstrap-table th{
+    height:35px;
+    border-top:2px solid #ddd!important
+}
+
+.light-theme .fixed-table-container tbody .selected td {
+    background-color: #c6bdff
+}
+
+.light-theme .bootstrap-table th,
+.light-theme .table-striped>tbody>tr:nth-of-type(even){
+    background-color:#fff;
+}
+
+.light-theme .table-striped>tbody>tr:nth-of-type(odd){
+    background-color:inherit;
+}
+
+.nav-tabs>li.active>a:hover,
+.nav-tabs>li.active>a{
+    color:black;
+}
+.nav-tabs>li>a{
+    color:white
+}
+.nav-tabs>li>a:hover{
+    color:black
+   }

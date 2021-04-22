@@ -1,0 +1,39 @@
+﻿<form ng-show="!settings.verifyEmailToekn">
+    <div class="form-group">
+        <label>Username</label>
+        <input type="text" class="form-control" ng-model="settings.account.username" readonly>
+    </div>
+
+    <div class="form-group">
+        <label >First Name</label>
+        <input type="text" class="form-control" ng-model="settings.account.firstName" >
+    </div>
+    <div class="form-group">
+        <label >Last Name</label>
+        <input type="text" class="form-control" ng-model="settings.account.lastName">
+    </div>
+    <div class="form-group">
+        <label for="inputEmail">Email</label>
+        <input type="email" class="form-control" ng-model="settings.account.email">
+    </div>
+
+    <div class="form-group">
+        <a  href="" ng-click="settings.sendPasswordResetEmail()">Send reset password email</a>
+        <p></p>
+        <span class="label label-success" ng-show="settings.resetPasswordEmailSentMessage">{{settings.resetPasswordEmailSentMessage}}</span>
+        <span class="label label-danger" ng-show="settings.resetPasswordEmailFailMessage">{{settings.resetPasswordEmailFailMessage}}</span>
+    </div>
+</form>
+<form ng-show="settings.verifyEmailToekn">
+    Before you can change your address, you need to confirm your email by typing the 6 digits numbers we sent to your email address
+    <div class="form-group">
+        <label for="inputEmail">Token</label>
+        <input type="text" class="form-control" ng-model="settings.account.changeEmailToken">
+    </div>
+    <div class="form-group">
+        <a href="" ng-click="settings.verifyEmailToekn=false">Back to profile</a>
+      </div>
+</form>
+<span class="label label-danger" ng-show="settings.saveAccountFailedMessage">{{settings.saveAccountFailedMessage}}</span>
+
+

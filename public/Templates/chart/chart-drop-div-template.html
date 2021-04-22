@@ -1,0 +1,20 @@
+﻿
+<div class="panel panel-default"  dock-panel>
+    <div class="panel-heading" dock="top">
+
+        <img alt='Table' src='/static_files/images/chartline16.png?lastModified=20160909T1938' /> Chart Container
+        <a href="" title="Restore"
+           style='position:absolute;right:20px'
+           ng-show="chartTabsManager.hasDraggedChart()"
+           ng-click="chartTabsManager.restoreDraggedChart()">
+            <span class="glyphicon glyphicon-resize-full"></span>
+        </a>
+    </div>
+    <div class="panel-body" dock="fill" id="{{chartTabsManager.dropDivId}}">
+
+
+        <div class="text-center" ng-show="!chartTabsManager.hasDraggedChart()">Drag Chart here</div>
+
+
+    </div>
+</div>

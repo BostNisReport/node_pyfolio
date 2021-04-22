@@ -1,0 +1,19 @@
+﻿<li class="dropdown" title="Show/Hide columns">
+    <a href="" class="dropdown-toggle" data-toggle="dropdown">
+        <img style="margin-bottom:3px" src="/static_files/images/little-gear.png?lastModified=20160909T1938" />
+    </a>
+
+    <ul class="dropdown-menu">
+        <li class="disabled" ><a href="" style="cursor:default">Show/Hide</a></li>
+        <li ng-repeat="col in table.bsTable.columns"
+            ng-show="col.title">
+
+            <a href="" ng-click="table.toggleColumn(col.field)" onclick="arguments[0].stopPropagation()">
+                <span style="margin-right:10px" class="glyphicon glyphicon-ok" ng-show="col.visible"></span>
+                <span style="margin-right:25px" ng-show="!col.visible"></span>
+                {{col.title}}
+            </a>
+        </li>
+    </ul>
+
+</li>

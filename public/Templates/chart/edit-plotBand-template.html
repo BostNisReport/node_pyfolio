@@ -1,0 +1,41 @@
+﻿<form class="form-horizontal">
+
+    <div class="form-group">
+        <a href="" class="btn btn-default" ng-click="settings.deletePlotBand();cancel()">Delete plotBand</a>
+    </div>
+
+    <div class="form-group">
+        <label for="inputLabelText">Label text</label>
+        <input type="text" class="form-control" id="inputLabelText" placeholder="label text" ng-model="settings.options.label.text">
+    </div>
+
+    <div class="form-group">
+        <label for="inputFromValue">From value</label>
+        <input type="number" class="form-control" id="inputFromValue" placeholder="from value" ng-model="settings.options.from">
+    </div>
+
+    <div class="form-group">
+        <label for="inputToValue">To value</label>
+        <input type="number" class="form-control" id="inputToValue" placeholder="to value" ng-model="settings.options.to">
+    </div>
+
+    <div class="form-group">
+        <a href="" class="btn btn-default" ng-click="showMore=true" ng-show="!showMore">More...</a> 
+    </div>
+
+    <div class="form-group" ng-show="showMore">
+        <label for="inputColor">Color</label>
+        <input type="text" class="form-control color-control" id="inputColor" placeholder="background color" ng-model="settings.options.color">
+    </div>
+
+    <div class="form-group" ng-show="showMore">
+        <label for="inputBorderColor">Border Color</label>
+        <input type="text" class="form-control  color-control" id="inputBorderColor" placeholder="border color" ng-model="settings.options.borderColor">
+    </div>
+
+    <div class="form-group" ng-show="showMore">
+        <label for="inputBorderWidth">Border Width</label>
+        <input type="number" class="form-control" id="inputBorderWidth" placeholder="border width" ng-model="settings.options.borderWidth">
+    </div>
+
+</form>

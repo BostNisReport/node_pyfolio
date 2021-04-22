@@ -1,0 +1,5 @@
+<p>CSV file must contain two columns, YYYYMMDDThhmm and the value, and must contain 195,660 lines.</p>
+<input type="file" ng-model="settings.textFiles" input-file-reader multiple ng-change="settings.filesChanged()" />
+<img height="19" src="/static_files/images/loading.gif?lastModified=20160909T1938" ng-show="settings.showLoadingImage" />
+<p class="error-tag" ng-show="settings.errorText">{{settings.errorText}}</p>
+<p class="status-tag" ng-show="settings.statusText">{{settings.statusText}}</p>

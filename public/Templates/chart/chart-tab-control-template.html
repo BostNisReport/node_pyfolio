@@ -1,0 +1,37 @@
+<div>
+    <div dock-panel>
+        <ul class="nav nav-tabs chart-tab-headers" ng-hide="chartTabsManager.hideTabsHeader" dock="top">
+            <li class="chart-tab-item"
+                role="presentation" ng-repeat="chart in chartTabsManager.charts"
+                ng-show="chart.isPrimaryChart"
+                ng-class="{active:chart.isSelected()}"
+                drag-drop-chart-to-div="{{'#'+chartTabsManager.dropDivId}}">
+                <a href="#" ng-click="chart.select()"
+                   my-dbclick="chartTabsManager.renameChartTabDialog(chart)">
+                    {{chart.title}}
+
+                    <span class="glyphicon glyphicon-edit" style="cursor:pointer"
+                          onclick="arguments[0].stopPropagation()"
+                          ng-click="chartTabsManager.renameChartTabDialog(chart)"
+                          title="Edit Title"></span>
+                    <span class="glyphicon glyphicon-remove" style="cursor:pointer"
+                          onclick="arguments[0].stopPropagation()"
+                          ng-click="chartTabsManager.removeChartTabDialog(chart)"
+                          title="Delete"
+                          ng-show="chartTabsManager.showRemoveTabButton()"></span>
+
+                </a>
+            </li>
+            <li role="presentation" ng-show="chartTabsManager.showAddTabButton()">
+                <a href="" ng-click="chartTabsManager.addNewChartTab()" title="Add new chart">
+                    <span class="glyphicon glyphicon-plus"></span>
+                </a>
+            </li>
+        </ul>
+        <div class="chart-tab-container-area" dock="fill" ng-repeat="chart in chartTabsManager.charts"
+             ng-show="chart.isSelected()">
+            <div highstock-control id="{{chart.divId}}"></div>
+        </div>
+
+    </div>
+</div>

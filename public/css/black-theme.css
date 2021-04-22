@@ -1,0 +1,17 @@
+﻿
+.black-theme ,.black-theme .all-content-container{
+    background-color:black;
+}
+
+
+
+/* for bootstrap-table */
+.black-theme .fixed-table-loading {
+    background-color: #111 !important;
+    bottom: -10px !important;
+}
+
+.black-theme .fixed-table-container tbody .selected td {
+    background-color: #c6bdff
+}
+

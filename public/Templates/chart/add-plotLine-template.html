@@ -1,0 +1,34 @@
+﻿<form class="form-horizontal">
+
+    <div class="form-group">
+        <label for="inputPanel">Panel</label>
+        <select class="form-control" ng-model="settings.selectedYAxis" >
+            <option ng-repeat="yAxis in settings.yAxis" value="{{yAxis.id}}"
+                    ng ng-selected="yAxis.id==settings.selectedYAxis">
+                {{yAxis.title.text}}
+            </option>
+        </select>
+    </div>
+
+   
+
+    <div class="form-group">
+        <label for="inputFromValue">Value</label>
+        <input type="number" class="form-control" id="inputValue" placeholder="plotline value" ng-model="settings.options.value">
+    </div>
+
+    <div class="form-group">
+        <a href="" class="btn btn-default" ng-click="showMore=true" ng-show="!showMore">More...</a>
+    </div>
+
+    <div class="form-group" ng-show="showMore">
+        <label for="inputColor">Color</label>
+        <input type="text" class="form-control color-control" id="inputColor" placeholder="plotLine color" ng-model="settings.options.color">
+    </div>
+
+    <div class="form-group" ng-show="showMore">
+        <label for="inputWidth">Width</label>
+        <input type="number" class="form-control" id="inputWidth" placeholder="plotline width" ng-model="settings.options.width">
+    </div>
+
+</form>

@@ -1,0 +1,17 @@
+﻿{
+    width: '100%',
+    height: '100%',
+    //enabletooltips: true,
+    columnsresize: true,
+    columnsreorder: true,
+    editable: true,
+    selectionmode: 'multiplecellsadvanced',
+	sortable: false,
+	filterable: true,
+    columns: [
+      { text: 'Short Name', columntype: 'textbox', datafield: 'Abbrev', width: 100, type:'string',readonly:true  },
+      { text: 'Setting Name', columntype: 'textbox', datafield: 'Setting', width: 160, type:'string',readonly:true,tooltip:function(row){return row.Description;}  },
+      { text: 'Value', columntype: 'textbox', datafield: 'Value', width: 100, type:'string' ,cellclassname:'light-green-cell'},
+      { text: 'Default Value', columntype: 'textbox', datafield: 'Default', width: 100, type:'string', readonly:true  }
+    ]
+}

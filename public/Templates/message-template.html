@@ -1,0 +1,12 @@
+﻿<div class="modal-header" ng-show="settings.title">
+    <h3 class="modal-title">{{settings.title}}</h3>
+</div>
+<div class="modal-body">
+    <div ng-bind-html="settings.body"></div>
+    <div ng-include="settings.bodyUrl"></div>
+</div>
+
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="ok()" ng-hide="settings.hideOkButton()" ng-disabled="settings.isBusy">{{settings.okButtonText||'OK'}}</button>
+    <button class="btn btn-warning" ng-click="cancel()" ng-hide="settings.hideCancelButton()" ng-disabled="settings.isBusy||settings.disableCancelButton">{{settings.cancelButtonText||'Cancel'}}</button>
+</div>

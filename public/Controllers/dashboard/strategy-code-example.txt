@@ -1,0 +1,11 @@
+﻿strategy.clenow = (mktWindow=200, riskFactor = .001, smaLength = 100, momoLength = 90, mktCapLimit = 500, rankTablePctile = .2, minMove = .1, minMomo = .30)
+ 
+clenow = schedule(date = monthly, time = mktOpen + 60)
+
+secList.universe = allSecurities -> sortSelect( marketCap, market_cap_limit)) - secList.adrs - secList.nonPrimaryShares
+ 
+slope = (calculate log10 slope of regression close / momoLength) -> annualize(250)
+ 
+secList.tgtHoldings       = secList.universe ->  sortSelect( slope(momoLength, > minMomentum), rankTablePctile)
+ 
+clenow.orderList = tgtHoldings

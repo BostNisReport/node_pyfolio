@@ -1,0 +1,133 @@
+{
+  "postTradeSkipBars": {
+    "Abbrev": "ptsb",
+    "Value": "0",
+    "Default": "0",
+    "Description": "After trade filled skip n bars before new trade",
+    "Validation": "number"
+  },
+  "maxIntraDayTrades": {
+    "Abbrev": "midt",
+    "Value": "5",
+    "Default": "5",
+    "Description": "Set maximum number of intraday trades",
+    "Validation": "number"
+  },
+  "volumeFillLimit": {
+    "Abbrev": "vfl",
+    "Value": "0.05",
+    "Default": ".025",
+    "Description": "Maximum percent of volume to be used in filling trade",
+    "Validation": "number"
+  },
+  "stopLossPct": {
+    "Abbrev": "slp",
+    "Value": "0.01",
+    "Default": ".01",
+    "Description": "Exit trade after n% loss",
+    "Validation": "number"
+  },
+  "trailStopPct": {
+    "Abbrev": "tsp",
+    "Value": "0.01",
+    "Default": ".01",
+    "Description": "Exit trade after PnL falls n% from high PnL",
+    "Validation": "number"
+  },
+  "trailStopThreshold": {
+    "Abbrev": "tst",
+    "Value": "0.005",
+    "Default": ".005",
+    "Description": "Activate trailStop after PnL reaches n%",
+    "Validation": "number"
+  },
+  "isIntraDay": {
+    "Abbrev": "iid",
+    "Value": "Y",
+    "Default": "Y",
+    "Description": "Exit trade at end of trading day",
+    "Validation": "list",
+    "AcceptedValues": "Y,N"
+  },
+  "holdOverWeekend": {
+    "Abbrev": "how",
+    "Value": "Y",
+    "Default": "Y",
+    "Description": "If yes: exit multiday trades before weekend",
+    "Validation": "list",
+    "AcceptedValues": "Y,N"
+  },
+  "slippageFormula": {
+    "Abbrev": "sf",
+    "Value": "(h+l)/2",
+    "Default": "(h+l)/2",
+    "Description": "Slippage calculation"
+  },
+  "useCompoundedCash": {
+    "Abbrev": "ucc",
+    "Value": "Y",
+    "Default": "Y",
+    "Description": "Available capital = compounded returns",
+    "Validation": "list",
+    "AcceptedValues": "Y,N"
+  },
+  "beginTrading": {
+    "Abbrev": "bt",
+    "Value": "15",
+    "Default": "15",
+    "Description": "Begin trading n minutes after market open",
+    "Validation": "number"
+  },
+  "endTading": {
+    "Abbrev": "et",
+    "Value": "5",
+    "Default": "5",
+    "Description": "End trading n minutes before market close",
+    "Validation": "number"
+  },
+  "lastTradeTime": {
+    "Abbrev": "ltt",
+    "Value": "30",
+    "Default": "30",
+    "Description": "Intraday trading: last trade = market close - n minutes"
+  },
+  "lastMultidayTradeTime": {
+    "Abbrev": "lmtt",
+    "Value": "10",
+    "Default": "10",
+    "Description": "Multiday trading: last trade = market close - n minutes",
+    "Validation": "number"
+  },
+  "BootStrap": {
+    "Abbrev": "bstrap",
+    "Value": "(3:30;5)",
+    "Default": "(3:30;5)",
+    "Description": "Number of bootStrap iterations (3:30; increment=3)"
+  },
+  "KfoldCross": {
+    "Abbrev": "kfold",
+    "Value": "5",
+    "Default": "5",
+    "Description": "Kfold cross validation values",
+    "Validation": "number"
+  },
+  "HoldOut": {
+    "Abbrev": "hold",
+    "Value": "20%;d",
+    "Default": "20%;d",
+    "Description": "Exclude n%; d = exclude dispersed; e = endOfSample"
+  },
+  "SPY": {
+    "Abbrev": "fin=",
+    "Value": "05;20;50",
+    "Default": "100",
+    "Description": "Fin weighting; separate multiple weightings with comma",
+    "Validation": "number"
+  },
+  "DIA": {
+    "Abbrev": "fin=",
+    "Value": "95;80;50",
+    "Default": "100",
+    "Description": "Fin weighting; separate multiple weightings with comma"
+  }
+}

@@ -1,0 +1,72 @@
+﻿<div class="article-details-container">
+
+    <table class="article-details-table">
+        <tbody>
+            <tr>
+                <td>Authors:</td>
+                <td>{{settings.row.author}}</td>
+            </tr>
+            <tr>
+                <td>Journal:</td>
+                <td>{{settings.row.journal}}</td>
+            </tr>
+            <tr>
+                <td>Year:</td>
+                <td>{{settings.row.year}}</td>
+            </tr>
+            <tr>
+                <td>Volume:</td>
+                <td>{{settings.row.volume}}</td>
+            </tr>
+            <tr>
+                <td>Issue:</td>
+                <td>{{settings.row.number}}</td>
+            </tr>
+            <tr>
+                <td>Pages:</td>
+                <td>{{settings.row.pages}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h4 ng-show="settings.row.abstract">Abstract</h4>
+    <p ng-show="settings.row.abstract" class="article-details-abstract">{{settings.row.abstract}}</p>
+
+    <h4 ng-show="settings.row.keywords">Author Keywords</h4>
+    <p ng-show="settings.row.keywords">{{settings.row.keywords}}</p>
+
+    <h4 ng-show="settings.row.key">Citation Key</h4>
+    <p ng-show="settings.row.key">{{settings.row.key}}</p>
+
+    <h4 ng-show="settings.row.url">URL</h4>
+    <a ng-show="settings.row.url" href="{{settings.row.url}}" target="_blank">{{settings.row.url}}</a>
+
+   <div ng-show="settings.row.arxivId || settings.row.doi || settings.row.isbn || settings.row.issn || settings.row.pmid">
+       <h4>Catalog IDs</h4>
+       <table class="article-details-table">
+           <tbody>
+               <tr ng-show="settings.row.arxivId">
+                   <td>ArXiv ID:</td>
+                   <td>{{settings.row.arxivId}}</td>
+               </tr>
+               <tr ng-show="settings.row.doi">
+                   <td>DOI:</td>
+                   <td>{{settings.row.doi}}</td>
+               </tr>
+               <tr ng-show="settings.row.isbn">
+                   <td>ISBN:</td>
+                   <td>{{settings.row.isbn}}</td>
+               </tr>
+               <tr ng-show="settings.row.issn">
+                   <td>ISSN:</td>
+                   <td>{{settings.row.issn}}</td>
+               </tr>
+               <tr ng-show="settings.row.pmid">
+                   <td>PMID:</td>
+                   <td>{{settings.row.pmid}}</td>
+               </tr>
+           </tbody>
+       </table>
+   </div>
+
+</div>

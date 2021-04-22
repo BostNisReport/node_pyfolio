@@ -1,0 +1,66 @@
+<script>
+    //This force angular.ready to wait till this module loaded
+    angular.require("ace");
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.6/ace.js" type="text/javascript" charset="utf-8"></script>
+
+<div class="strategy-builder-panel" dock-panel>
+
+    <div dock="top" class="strategy-builder-top-panel">
+        
+        <div class="strategy-builder-toolbar">
+            <div class="left-margin" role="group" >
+                <a class="toolbar-button btn btn-default not-active" title="Add Strategy">
+                    <img height="18" width="18" src="/static_files/images/new-file-inactive.svg?lastModified=20160925T0221" />
+                </a>
+                <a class="toolbar-button btn btn-default  not-active " title="Remove Strategy"ng-click="removeStrategy()">
+                    <img height="18" width="18" src="/static_files/images/trash-inactive.svg?lastModified=20160925T0221" />
+                </a>
+                <a class="toolbar-button btn btn-default  not-active" title="Chart line" ng-click="chartSelectedLine()">
+                    <img height="18" width="18" src="/static_files/images/chart-inactive.svg?lastModified=20160925T0221" />
+                </a>
+                <a class="toolbar-button btn btn-default not-active" title="Run Strategy" ng-click="runStrategy()">
+                    <img height="18" width="18" src="/static_files/images/run-inactive.svg?lastModified=20160925T0221" />
+                </a>
+                <a class="toolbar-button btn btn-default not-active" title="Python">
+                    <img height="18" width="18" src="/static_files/images/python-inactive.svg?lastModified=20160925T0221" />
+                </a>
+                <a class="toolbar-button btn btn-default" title="Load CSV to Chart" ng-click="importCsvFile()">
+                    <img height="18" width="18" src="/static_files/images/upload.svg?lastModified=20160909T1938" />
+                </a>
+            </div>
+
+        </div>
+		<div class="stratname">
+        <div class="left-margin">
+            <span class="strategy-label-name">Strategy:</span> <!--<label class="label-title"> clenow</label>-->
+        </div>
+		</div>
+    </div>
+    <div dock="bottom" class="strategy-builder-bottom-panel">
+       <div class="left-margin">
+           <span class="results-label">Results</span>
+           <span class="p-l-label">P&L</span>
+           <span class="p-l-value">6.5%</span>
+           <span class="sharpe-label">Sharpe</span>
+           <span class="sharpe-value">1.4</span>
+           <span class="trades-day-label">Trades/Day</span>
+           <span class="trades-day-value">3.2</span>
+           <a href="">More</a>
+        </div> 
+    </div>
+    <div class="strategy-builder-code-editor" dock="fill"></div>
+
+    <div ng-show="showLoading || saveStatus == 'progress'" >
+        <div class="all-content-container top-most" style="opacity:0.6"> </div>
+        <img height="19" class="centered top-most" src="/static_files/images/loading.gif?lastModified=20160909T1938" />
+    </div>
+
+    <div class="right-bottom">
+        <div ng-show="saveStatus=='progress'" class="alert alert-success" role="alert">Adding new line...</div>
+        <div ng-show="saveStatus=='ok'" class="alert alert-success" role="alert">New line added successfully</div>
+        <div ng-show="saveStatus=='error'" class="alert alert-danger" role="alert">{{saveStatusMessage||'Adding new line failed'}}</div>
+    </div>
+
+
+</div>

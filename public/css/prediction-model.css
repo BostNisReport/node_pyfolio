@@ -1,0 +1,26 @@
+.prediction-model-results{
+    color: grey;
+    font-size:15px;
+    margin:10px
+}
+
+.prediction-model-label{
+    margin-right:30px
+}
+
+.accuracy-label{
+
+}
+.accuracy-value{
+    font-size:14px;
+    font-weight:bold;
+    margin-right:30px
+}
+.loss-label{
+
+}
+.loss-value{
+    font-size:14px;
+    font-weight:bold;
+    margin-right:30px
+}
